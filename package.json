@@ -1,0 +1,26 @@
+{
+  "name": "AwesomeProject2",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "android-fix": "react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res",
+    "android-run": "react-native run-android",
+    "test": "jest"
+  },
+  "dependencies": {
+    "native-base": "^2.3.8",
+    "react": "16.2.0",
+    "react-native": "0.53.0",
+    "react-navigation": "^1.0.3"
+  },
+  "devDependencies": {
+    "babel-jest": "22.2.2",
+    "babel-preset-react-native": "4.0.0",
+    "jest": "22.2.2",
+    "react-test-renderer": "16.2.0"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}
