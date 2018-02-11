@@ -4,11 +4,14 @@
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
-    "android-fix": "react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res",
+    "android-bundle": "react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res",
     "android-run": "react-native run-android",
+    "link": "react-native link",
     "test": "jest"
   },
   "dependencies": {
+    "color": "^3.0.0",
+    "lodash": "^4.17.5",
     "native-base": "^2.3.8",
     "react": "16.2.0",
     "react-native": "0.53.0",
