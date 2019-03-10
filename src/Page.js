@@ -14,12 +14,15 @@ import {
   Text
 } from "native-base";
 import Sound from "react-native-sound";
+import { Image, StyleSheet } from "react-native";
 
 // Enable playback in silence mode
 Sound.setCategory("Playback");
 
 export default class Page extends Component {
-  componentDidMount() {
+  componentDidMount() {}
+
+  handleClick() {
     // Load the sound file 'whoosh.mp3' from the app bundle
     // See notes below about preloading sounds within initialization code below.
     var whoosh = new Sound("duck.mp3", Sound.MAIN_BUNDLE, error => {
@@ -45,6 +48,7 @@ export default class Page extends Component {
       });
     });
   }
+
   render() {
     return (
       <Container>
@@ -60,7 +64,12 @@ export default class Page extends Component {
           <Right />
         </Header>
         <Content>
-          <Text>This is Content Section 23</Text>
+          <Button onPress={this.handleClick}>
+            <Image
+              source={require('./images/duck.jpeg')}
+              style={styles.ImageIconStyle}
+            />
+          </Button>
         </Content>
         <Footer>
           <FooterTab>
@@ -73,3 +82,13 @@ export default class Page extends Component {
     );
   }
 }
+
+const styles = StyleSheet.create({
+  ImageIconStyle: {
+    padding: 0,
+    margin: 50,
+    height: 50,
+    width: 50,
+    resizeMode: 'stretch',
+  }
+});
