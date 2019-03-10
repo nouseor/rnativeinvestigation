@@ -7,6 +7,7 @@
     "android-bundle": "react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res",
     "android-run": "react-native run-android",
     "link": "react-native link",
+    "link-sound": "react-native link react-native-sound",
     "test": "jest"
   },
   "dependencies": {
@@ -15,6 +16,7 @@
     "native-base": "^2.3.8",
     "react": "16.2.0",
     "react-native": "0.53.0",
+    "react-native-sound": "^0.10.12",
     "react-navigation": "^1.0.3"
   },
   "devDependencies": {
